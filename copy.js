@@ -16,16 +16,13 @@ if( process.argv.length < 3 ) {
 	console.log( usage );
 
 } else {
-	// Catch errors the ugly way
-	// there are libraries
-	// out there that handle this
-	// in a nicer way.
+
 	fs.createReadStream( process.argv[2] )
-	.on('error', function (err) {
+	.on('error', (err) => {
 		console.log(err);
 	})
 	.pipe( fs.createWriteStream( process.argv[3] ) )
-	.on('error', function (err) {
+	.on('error', (err) => {
 		console.log(err);
 	});
 
