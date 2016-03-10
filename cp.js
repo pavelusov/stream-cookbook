@@ -7,7 +7,7 @@ const usage = `
 	copy.js (linux cp command clone)
 	copy any important cat related documents
 	usage:
-	>	node copy.js ./cats.txt ./cats_copied.txt
+	>	node cp.js ./cats.txt ./cats_copied.txt
 
 `;
 
